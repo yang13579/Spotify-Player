@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spotifyplayer.FXMLDocumentController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="99.0" layoutX="12.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="606.0" />
+      <Slider fx:id="trackSlider" disable="true" layoutX="80.0" layoutY="405.0" max="30.0" prefHeight="14.0" prefWidth="458.0" />
+      <ImageView fx:id="albumCoverImageView" fitHeight="256.0" fitWidth="256.0" layoutX="14.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" />
+      <TableView fx:id="tracksTableView" layoutX="277.0" layoutY="142.0" prefHeight="224.0" prefWidth="342.0">
+        <columns>
+          <TableColumn prefWidth="28.0" text="#" />
+          <TableColumn prefWidth="313.0" text="Title" />
+        </columns>
+      </TableView>
+      <TextField fx:id="artistTextField" layoutX="311.0" layoutY="117.0" onAction="#searchForArtistEvent" prefHeight="25.0" prefWidth="274.0" promptText="Seach for artist..." />
+      <Button fx:id="previousAlbumButton" layoutX="277.0" layoutY="117.0" mnemonicParsing="false" onAction="#previousAlbumButtonAction" prefHeight="25.0" prefWidth="32.0" text="&lt;" />
+      <Button fx:id="nextAlbumButton" layoutX="585.0" layoutY="117.0" mnemonicParsing="false" onAction="#nextAlbumButtonAction" prefHeight="25.0" prefWidth="32.0" text="&gt;" />
+      <Label fx:id="artistNameLabel" layoutX="22.0" layoutY="23.0" prefHeight="45.0" prefWidth="458.0" text="Artist Name">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+         </font></Label>
+      <Label fx:id="albumNameLabel" layoutX="22.0" layoutY="67.0" prefHeight="34.0" prefWidth="458.0" text="Album Name">
+         <font>
+            <Font name="Blackadder ITC" size="18.0" />
+         </font></Label>
+      <ProgressIndicator fx:id="progress" layoutX="513.0" layoutY="25.0" prefHeight="77.0" prefWidth="99.0" visible="false" />
+      <Button layoutX="277.0" layoutY="373.0" mnemonicParsing="false" onAction="#saveButtonAction" prefHeight="25.0" prefWidth="342.0" text="save cover image" />
+      <Label fx:id="timeLabel" layoutX="552.0" layoutY="404.0" prefHeight="17.0" prefWidth="77.0" text="00:00 / 00:30" />
+      <Button fx:id="buttomPlayButton" layoutX="14.0" layoutY="400.0" mnemonicParsing="false" onAction="#playButtonClick" prefHeight="25.0" prefWidth="52.0" text="Play" />
+    </children>
+</AnchorPane>
